@@ -23,9 +23,10 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public T set(int i, T e){
+    T temporary = super.get(i);
     super.remove(i);
     add(e);
-    return e;
+    return temporary;
   }
 
 }
